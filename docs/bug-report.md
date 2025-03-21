@@ -33,7 +33,7 @@ Some time slots overlap with "Study routine" so can't be enabled.
 
 - Screenshot attached: ![screenshot](assets/bug-screenshot.png)
 
-- Video attached: ![video](assets/bug-screencast.mp4)
+- Link to download video: [bug-screencast.mp4](assets/bug-screencast.mp4)
 
 ## Logs or Console Errors
 
