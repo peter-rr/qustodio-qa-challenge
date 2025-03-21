@@ -31,7 +31,7 @@ Some time slots overlap with "Study routine" so can't be enabled.
 
 ## Screenshots / Screen Recordings
 
-- Screenshot attached: ![Wrong message](docs/assets/screenshot.png)
+- Screenshot attached: ![Wrong message](docs/assets/bug-screenshot.png)
 
 
 - 
