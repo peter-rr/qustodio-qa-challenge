@@ -1,20 +1,22 @@
-import { test, expect, request } from '@playwright/test'
-import { addPet, getPetById } from '../utils/api-helpers'
-import { testPet } from '../utils/test-data'
+import { test } from '@playwright/test'
+import { addPet, updatePet, waitForDatabaseRefresh } from '../utils/api-helpers'
+import { testPet, testPetEdited } from '../utils/test-data'
 
-test.describe('Tests for API automation', () => {
+test.describe.serial('Tests for API automation', () => {
     
-    test('add new pet and retrieve its data by API call', async ({request}) => {
-        await addPet(request, testPet)
+    test('add new pet and wait for database refresh to retrieve its data by API call', async ({request}) => {
+        const petAdded = await addPet(request, testPet)
+        console.log(petAdded)
 
-        const petData = await getPetById(request, testPet.id)
-        console.log(petData)        
+        const petData = await waitForDatabaseRefresh(request, testPet.id, testPet.status);
+        console.log(petData)    
     })
 
-    test.skip('update an existing pet', async ({request}) => {
-        
-        // code here
+    test('update an existing pet and wait for database refresh to retrieve its data by API call', async ({request}) => {
+        const petUpdated = await updatePet(request, testPetEdited)
+        console.log(petUpdated)
 
+        const petData = await waitForDatabaseRefresh(request, testPetEdited.id, testPetEdited.status);
+        console.log(petData)
     })
-
 })
