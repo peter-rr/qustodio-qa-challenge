@@ -62,9 +62,9 @@ npm install
     |-- utils/
         |-- api-helpers.ts                  # Helper functions for some API operations
         |-- test-data.ts                    # Test data for reusable cases (JSON format)
-|-- playwright.config.js                    # Playwright configuration file
-|-- package.json                            # Project dependencies and scripts
-|-- README.md                               # Project documentation
+    |-- playwright.config.js                # Playwright configuration file
+    |-- package.json                        # Project dependencies and scripts
+    |-- README.md                           # Project documentation
 ```
 
 ## Usage
